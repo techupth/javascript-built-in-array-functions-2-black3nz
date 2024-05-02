@@ -374,4 +374,8 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+const uniqueMembers = new Set(bills.filter(bill => bill.member !== null).map(bill => bill.member.name));
+
+const totalMembers = uniqueMembers.size;
+
+console.log(`Unique Members Count: ${totalMembers}`);
